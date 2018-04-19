@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.movies.icuba.mymovieworld">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="My Movie World"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".Explore"
+            android:label="@string/exp_lay"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".drawer.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawer.FavouritesActivity"
+            android:label="@string/favo_lay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawer.RatedActivity"
+            android:label="@string/rat_lay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawer.WatchlistActivity"
+            android:label="@string/watch_lay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".drawer.PeopleActivity"
+            android:label="@string/peop_lay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".details_activity.Movie_Details" />
+        <activity android:name=".details_activity.People_Details" />
+        <activity android:name=".details_activity.Cast_and_Crew"></activity>
+    </application>
+
+</manifest>

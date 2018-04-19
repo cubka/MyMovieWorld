@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Movie World</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="exp_lay">EXPLORE</string>
+    <string name="favo_lay">FAVOURITES</string>
+    <string name="rat_lay">RATED</string>
+    <string name="watch_lay">WATCHLIST</string>
+    <string name="peop_lay">PEOPLE</string>
+    <string name="LOGOUT_NAV">LOGOUT</string>
+    <string name="LOGIN_NAV">LOGIN</string>
+    <string name="check_internet_title">no internet connection</string>
+    <string name="check_internet_message">You are not connected</string>
+    <string name="check_internet_settings">Please retry</string>
+    <string name="check_internet_cancel">cancel</string>
+    <string name="login_button">Login</string>
+    <string name="search">Search</string>
+</resources>

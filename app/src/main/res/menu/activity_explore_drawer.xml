@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_explore"
+            android:title="@string/exp_lay" />
+        <item
+            android:id="@+id/nav_favourites"
+            android:title="@string/favo_lay" />
+        <item
+            android:id="@+id/nav_rating"
+            android:title="@string/rat_lay" />
+        <item
+            android:id="@+id/nav_watchlist"
+            android:title="@string/watch_lay" />
+        <item
+            android:id="@+id/nav_people"
+            android:title="@string/peop_lay" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="LOGOUT" />
+
+    </group>
+
+
+
+
+</menu>
