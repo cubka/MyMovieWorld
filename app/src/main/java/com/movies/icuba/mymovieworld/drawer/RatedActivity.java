@@ -42,6 +42,7 @@ public class RatedActivity extends AppCompatActivity implements NavigationView.O
     Movie_Model model;
     @BindView(R.id.recycler)
     RecyclerView recycler;
+    MenuItem menuItem;
 
 
     @Override
@@ -65,6 +66,7 @@ public class RatedActivity extends AppCompatActivity implements NavigationView.O
         final ImageView imageView = view.findViewById(R.id.imageView);
         final TextView name = view.findViewById(R.id.name);
         final TextView username = view.findViewById(R.id.textView);
+        menuItem = navigationView.getMenu().findItem(R.id.nav_logout);
 
         recycler.setHasFixedSize(true);
         recycler.setLayoutManager(new GridLayoutManager(RatedActivity.this, 2));
@@ -138,10 +140,12 @@ public class RatedActivity extends AppCompatActivity implements NavigationView.O
                 }
             });
 
-        } else {
 
+            menuItem.setTitle("LOGOUT");
         }
-
+        else {
+            menuItem.setTitle("LOGIN");
+        }
 
 
 

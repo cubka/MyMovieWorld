@@ -22,7 +22,7 @@
             android:title="@string/peop_lay" />
         <item
             android:id="@+id/nav_logout"
-            android:title="LOGOUT" />
+            android:title="LOGIN" />
 
     </group>
 

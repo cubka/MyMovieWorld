@@ -49,6 +49,7 @@ public class PeopleActivity extends AppCompatActivity implements NavigationView.
     RestApi api;
     User user;
     String sessionId = "";
+    MenuItem menuItem;
 
 
 
@@ -73,6 +74,7 @@ public class PeopleActivity extends AppCompatActivity implements NavigationView.
         final ImageView imageView = view.findViewById(R.id.imageView);
         final TextView name = view.findViewById(R.id.name);
         final TextView username = view.findViewById(R.id.textView);
+        menuItem = navigationView.getMenu().findItem(R.id.nav_logout);
 
         recycler.setHasFixedSize(true);
         recycler.setLayoutManager(new GridLayoutManager(this, 1));
@@ -116,7 +118,16 @@ public class PeopleActivity extends AppCompatActivity implements NavigationView.
                     });
                 }
             });
+
+            menuItem.setTitle("LOGOUT");
+
         }
+
+        else {
+            menuItem.setTitle("LOGIN");
+        }
+
+
 
 
             Call<People_Model> call = api.getPeople();

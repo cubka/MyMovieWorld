@@ -59,6 +59,7 @@ public class CastFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.global_layout_one, null);
+
         mUnbind = ButterKnife.bind(this, view);
 
         api = new RestApi(getActivity());

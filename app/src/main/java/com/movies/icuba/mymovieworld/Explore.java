@@ -50,6 +50,7 @@ public class Explore extends AppCompatActivity
     RestApi api;
     @BindView(R.id.search)
     EditText search_;
+    MenuItem menuItem;
 
 
 
@@ -79,6 +80,7 @@ protected void onCreate(Bundle savedInstanceState) {
         final ImageView imageView = view.findViewById(R.id.imageView);
         final TextView name = view.findViewById(R.id.name);
         final TextView username = view.findViewById(R.id.textView);
+        menuItem = navigationView.getMenu().findItem(R.id.nav_logout);
 
 
         user =  SharedPrefrences.getUser(Explore.this);
@@ -123,16 +125,13 @@ protected void onCreate(Bundle savedInstanceState) {
                 }
             });
 
-        }
-        else  {
-
+            menuItem.setTitle("LOGOUT");
 
         }
 
-
-
-
-
+        else {
+            menuItem.setTitle("LOGIN");
+        }
 
         }
 

@@ -60,8 +60,6 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         User user =response.body();
-
-
                         createLoginId(user);
 
                     }
@@ -86,14 +84,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
                         User user =response.body();
-
-
                         createSession(user);
 
-
-
-
-                    }
+                        }
 
                     @Override
                     public void onFailure(Call<User> call, Throwable t) {
@@ -114,10 +107,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<User> call, Response<User> response) {
 
-
-
                         SharedPrefrences.addUser(response.body(), LoginActivity.this);
-
 
                         startActivity(new Intent(LoginActivity.this,Explore.class));
 

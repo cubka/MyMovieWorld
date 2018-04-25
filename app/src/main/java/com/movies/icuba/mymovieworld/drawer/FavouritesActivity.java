@@ -1,5 +1,6 @@
 package com.movies.icuba.mymovieworld.drawer;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -45,6 +46,8 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
     Movie_Model model;
     @BindView(R.id.recycler)
     RecyclerView recycler;
+    MenuItem menuItem;
+
 
 
 
@@ -66,9 +69,9 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-
         user = new User();
         model = new Movie_Model();
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -76,6 +79,7 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
         final ImageView imageView = view.findViewById(R.id.imageView);
         final TextView name = view.findViewById(R.id.name);
         final TextView username = view.findViewById(R.id.textView);
+        menuItem = navigationView.getMenu().findItem(R.id.nav_logout);
 
 
         recycler.setHasFixedSize(true);
@@ -87,10 +91,7 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
         if (user != null)
             sessionId = user.session_id;
 
-
         if (sessionId != null && !sessionId.isEmpty()) {
-
-
 
             api.checkInternet(new Runnable() {
                 @Override
@@ -153,12 +154,16 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
                 }
             });
 
+
+           menuItem.setTitle("LOGOUT");
+
         }
 
+        else {
+            menuItem.setTitle("LOGIN");
+        }
 
-    }
-
-
+        }
 
 
     @Override
@@ -176,10 +181,6 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
         getMenuInflater().inflate(R.menu.explore, menu);
         return true;
     }
-
-
-
-
 
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -216,10 +217,6 @@ public class FavouritesActivity extends AppCompatActivity  implements Navigation
 
 
         } else if (id == R.id.nav_logout) {
-
-
-
-
 
         }
 
